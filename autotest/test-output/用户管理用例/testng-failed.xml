@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [用户管理用例]" parallel="none">
+  <test name="新增用户(failed)" parallel="none">
+    <classes>
+      <class name="zichan.common.po.test.LoginPageTest">
+        <parameter name="username" value="自动化测试用户111"/>
+        <parameter name="usercode" value="autotest111"/>
+        <parameter name="remark" value="自动化测试备注111"/>
+        <parameter name="confirmPwd" value="1"/>
+        <parameter name="password" value="1"/>
+        <parameter name="mobile" value="13500000000"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.LoginPageTest -->
+      <class name="zichan.common.po.test.IndexPageTest">
+        <parameter name="username" value="自动化测试用户111"/>
+        <parameter name="usercode" value="autotest111"/>
+        <parameter name="remark" value="自动化测试备注111"/>
+        <parameter name="confirmPwd" value="1"/>
+        <parameter name="password" value="1"/>
+        <parameter name="mobile" value="13500000000"/>
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.IndexPageTest -->
+      <class name="zichan.sysmanage.po.test.SysUserEditPageTest">
+        <parameter name="username" value="自动化测试用户111"/>
+        <parameter name="usercode" value="autotest111"/>
+        <parameter name="remark" value="自动化测试备注111"/>
+        <parameter name="confirmPwd" value="1"/>
+        <parameter name="password" value="1"/>
+        <parameter name="mobile" value="13500000000"/>
+        <methods>
+          <include name="testSave" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.sysmanage.po.test.SysUserEditPageTest -->
+    </classes>
+  </test> <!-- 新增用户(failed) -->
+</suite> <!-- Failed suite [用户管理用例] -->

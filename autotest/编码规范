@@ -1,0 +1,14 @@
+代码规范：
+
+创建描述类：fasp.common.po
+创建测试类：fasp.common.test
+创建测试用例：fasp.common.testcases
+
+fasp:财政新产品代号（项目名）
+common：公用（产品名）
+po:描述类
+test：测试类
+testcases:测试用例
+
+描述类按照页面写，一个页面对应一个描述类，测试类及测试用例可以有多个。
+写好注释！！！！！！

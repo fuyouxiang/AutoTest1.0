@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="登录系统测试用例" preserve-order="true">
+
+		<test name="正常登录">
+		<parameter name="username" value="16100101"></parameter>
+		<parameter name="password" value="1"></parameter>
+		<classes>
+			<class name="fasp.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+
+	
+</suite>

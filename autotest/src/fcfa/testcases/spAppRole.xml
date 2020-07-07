@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="系统管理-角色管理用例" preserve-order="true">
+		
+	<test name="登录系统">
+		<classes>
+		  
+			<class name="fcfa.common.po.test.IndexPageTest">
+					<methods>
+						<include name="testClickLogoutBtn"></include>
+					</methods>
+			</class> 
+			<class name="fcfa.common.po.test.LoginPageTest">
+				<parameter name="username" value="B330001"></parameter>
+				<parameter name="password" value="cz_"></parameter>
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="新增角色" preserve-order="true">
+		<classes>
+			
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickSpAppRole"></include>
+					<include name="testClickAssetList"></include>
+					<include name="testClickAddBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.sysmanage.po.test.SpAppRolePageTest">
+				<methods>
+					<include name="testSave">
+						<parameter name="roleCode" value="autocode001"></parameter>
+						<parameter name="roleName" value="自动化角色名称001"></parameter>
+						<parameter name="roleDescription" value="自动化测试新增角色"></parameter>
+					</include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="保存成功"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+			
+		</classes>
+	</test>
+	
+	<test name="修改角色" preserve-order="true">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickModifyBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.sysmanage.po.test.SpAppRolePageTest">
+				<methods>
+					<include name="testSave">
+						<parameter name="roleCode" value="autocode002"></parameter>
+						<parameter name="roleName" value="自动化角色名称002"></parameter>
+						<parameter name="roleDescription" value="自动化测试修改角色"></parameter>
+					</include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="修改成功"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+			
+		</classes>
+	</test>
+	
+	
+	<test name="启用用户">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickEnableBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="启用成功"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="停用用户">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDisableBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="停用成功"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="删除用户">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDeleteBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.DeleteConfirmPageTest">
+				<methods>
+					<include name="testClickdelConfirmBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="删除成功"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	 
+</suite>

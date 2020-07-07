@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [资产导入用例]" parallel="none">
+  <test name="资产导入(failed)" parallel="none">
+    <classes>
+      <class name="zichan.common.po.test.IndexPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.IndexPageTest -->
+      <class name="zichan.common.po.test.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.LoginPageTest -->
+      <class name="zichan.assetmanage.po.test.AssetCardImportPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testImportFile"/>
+        </methods>
+      </class> <!-- zichan.assetmanage.po.test.AssetCardImportPageTest -->
+    </classes>
+  </test> <!-- 资产导入(failed) -->
+</suite> <!-- Failed suite [资产导入用例] -->

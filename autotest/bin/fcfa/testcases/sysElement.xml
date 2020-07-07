@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="要素代码集用例">
+	
+	<test name="登录系统" preserve-order="true">
+		<parameter name="username" value="999999999"></parameter>
+		<parameter name="password" value="1"></parameter>
+		<classes>
+			<!--  
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickLogoutBtn"></include>
+				</methods>
+			</class> 
+			-->
+			
+			<class name="fcfa.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class>
+			
+			
+		</classes>
+	</test>
+	
+	<test name="要素代码集新增用例">
+		<parameter name="eleCode" value="931"></parameter>
+			
+		<classes>
+		
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickSysElement"></include>
+					<include name="testClickAddBtn"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementBasePageTest">
+				
+				<parameter name="eleName" value="931Name"></parameter>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementStandardPageTest">
+				<parameter name="codeRule" value="codeRule111"></parameter>
+				<parameter name="scope" value="scope111"></parameter>
+				<parameter name="eleStandard" value="eleStandard111"></parameter>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementRemarkPageTest">
+				<parameter name="remark" value="remark111"></parameter>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementSourcePageTest">
+			</class>
+			
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="保存成功"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+			
+		</classes>
+	</test>
+	
+	<!--  
+	<test name="要素代码集修改用例">
+		<parameter name="eleCode" value="931"></parameter>
+		<parameter name="eleName" value="931Name"></parameter>
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickModifyBtn"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementBasePageTest">
+				<parameter name="eleCode" value="932"></parameter>
+				<parameter name="eleName" value="932修改Name"></parameter>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementStandardPageTest">
+				<parameter name="codeRule" value="codeRule222"></parameter>
+				<parameter name="scope" value="scope222"></parameter>
+				<parameter name="eleStandard" value="eleStandard222"></parameter>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementRemarkPageTest">
+				<parameter name="remark" value="remark222"></parameter>
+			</class>
+			
+			<class name="fcfa.basedata.po.test.SysElementSourcePageTest">
+			</class>
+			
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="修改成功!"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	-->
+	
+	<test name="启用要素代码集">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickEnableBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="启用成功！"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="停用要素代码集">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDisableBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="停用成功！"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="删除要素代码集">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDeleteBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.DeleteConfirmPageTest">
+				<methods>
+					<include name="testClickdelConfirmBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="删除成功"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+</suite>

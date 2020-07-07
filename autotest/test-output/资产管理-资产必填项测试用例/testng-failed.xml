@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [资产管理-资产必填项测试用例]">
+  <parameter name="username" value="B330001"/>
+  <parameter name="password" value="cz_"/>
+  <test name="新增资产必填项-新增保存(failed)">
+    <classes>
+      <class name="fcfa.common.po.test.ConfirmPageTest">
+        <parameter name="expectedMsg" value="保存成功！"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- fcfa.common.po.test.ConfirmPageTest -->
+      <class name="fcfa.assetmanage.po.test.AssetItemMappingPageTest">
+        <parameter name="expectedMsg" value="保存成功！"/>
+        <methods>
+          <include name="testAddSave"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- fcfa.assetmanage.po.test.AssetItemMappingPageTest -->
+      <class name="fcfa.common.po.test.LoginPageTest">
+        <parameter name="expectedMsg" value="保存成功！"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- fcfa.common.po.test.LoginPageTest -->
+      <class name="fcfa.common.po.test.IndexPageTest">
+        <parameter name="expectedMsg" value="保存成功！"/>
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- fcfa.common.po.test.IndexPageTest -->
+    </classes>
+  </test> <!-- 新增资产必填项-新增保存(failed) -->
+</suite> <!-- Failed suite [资产管理-资产必填项测试用例] -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [资产拆分测试用例]" parallel="none">
+  <parameter name="username" value="5011001002"/>
+  <parameter name="password" value="1"/>
+  <test name="资产拆分(failed)" parallel="none">
+    <classes>
+      <class name="zichan.assetmanage.po.test.AssetSplitPageTest">
+        <parameter name="row" value="1"/>
+        <methods>
+          <include name="setup"/>
+          <include name="testSave" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- zichan.assetmanage.po.test.AssetSplitPageTest -->
+      <class name="zichan.common.po.test.LoginPageTest">
+        <parameter name="row" value="1"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.LoginPageTest -->
+      <class name="zichan.common.po.test.IndexPageTest">
+        <parameter name="row" value="1"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.IndexPageTest -->
+    </classes>
+  </test> <!-- 资产拆分(failed) -->
+</suite> <!-- Failed suite [资产拆分测试用例] -->

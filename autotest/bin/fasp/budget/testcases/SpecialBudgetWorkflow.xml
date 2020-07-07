@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="登录系统测试用例" preserve-order="true">
+
+	<test name="正常登录">
+		<parameter name="username" value="999111002"></parameter><!-- 用户名 -->
+		<parameter name="password" value="1"></parameter><!-- 密码 -->
+		<classes>
+			<class name="fasp.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	
+	<test name="指标新增并送审">
+		<parameter name="ModuleName" value="付有翔指标模板"></parameter><!-- 新增模板的模板名称 -->
+		<parameter name="ModuleMoney" value="123.45"></parameter><!-- 新增模板的金额 -->
+		<classes>
+			<class name="fasp.budget.po.test.SpecialBudgetInputTest">
+				<methods>
+					<include name="ClikAddButton_Zhuanxiang"></include>
+					<include name="ClickAddButton"></include>
+					<include name="NewModule"></include>
+					<include name="Choosemodule"></include>
+					<include name="ZhiBiaoSubmit_One"></include>
+					<include name="AllSubmit"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	
+	<test name="指标审核">		
+		<parameter name="suggestion" value="付有翔同意!"></parameter>
+		<classes>
+			<class name="fasp.budget.po.test.SpecialBudgetCheckTest">
+				<methods>
+					<include name="GuanLiButton"></include>
+					<include name="ClikSubmitButton"></include>
+					<include name="ZhiBiaoShenHe_One"></include>
+					<include name="MoreReview"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	
+	
+</suite>

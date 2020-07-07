@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [业务模块管理测试用例]">
+  <parameter name="spApp_version" value="V1.2"/>
+  <parameter name="username" value="999999999"/>
+  <parameter name="selectRow" value="1"/>
+  <parameter name="expectedMsg" value="保存成功！"/>
+  <parameter name="spApp_developer" value="开发商新名称"/>
+  <parameter name="password" value="1"/>
+  <parameter name="spApp_code" value="8022"/>
+  <parameter name="spApp_name" value="自动化修改业务模块8022"/>
+  <listeners>
+    <listener class-name="main.util.RetryListener"/>
+    <listener class-name="main.util.TestNGListener"/>
+  </listeners>
+  <test name="启用业务模块(failed)">
+    <classes>
+      <class name="zichan.common.po.test.DeleteConfirmPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.DeleteConfirmPageTest -->
+      <class name="zichan.common.po.test.IndexPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.IndexPageTest -->
+      <class name="zichan.common.po.test.ConfirmPageTest">
+        <methods>
+          <include name="testAssertEquals"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.ConfirmPageTest -->
+      <class name="zichan.sysmanage.po.test.SpAppEditPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.sysmanage.po.test.SpAppEditPageTest -->
+      <class name="zichan.common.po.test.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.LoginPageTest -->
+      <class name="zichan.common.po.test.ConfirmNewPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.ConfirmNewPageTest -->
+    </classes>
+  </test> <!-- 启用业务模块(failed) -->
+  <test name="停用业务模块(failed)">
+    <classes>
+      <class name="zichan.common.po.test.DeleteConfirmPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.DeleteConfirmPageTest -->
+      <class name="zichan.common.po.test.IndexPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.IndexPageTest -->
+      <class name="zichan.common.po.test.ConfirmPageTest">
+        <methods>
+          <include name="testAssertEquals"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.ConfirmPageTest -->
+      <class name="zichan.sysmanage.po.test.SpAppEditPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.sysmanage.po.test.SpAppEditPageTest -->
+      <class name="zichan.common.po.test.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.LoginPageTest -->
+      <class name="zichan.common.po.test.ConfirmNewPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.ConfirmNewPageTest -->
+    </classes>
+  </test> <!-- 停用业务模块(failed) -->
+</suite> <!-- Failed suite [业务模块管理测试用例] -->

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "HTTP://testng.org/testng-1.0.dtd">
+<suite name="资产拆分测试用例">
+	<test name="登录系统">
+		<parameter name="username" value="115001"></parameter>
+		<parameter name="password" value="1"></parameter>
+		<classes>
+			<class name="fcfa.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="资产拆分">
+		
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickAssetSplit"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.assetmanage.po.test.AssetSplitPageTest">
+				<parameter name="assetCode" value="100000000149"></parameter>
+			</class>
+		</classes>
+	</test>
+
+</suite>

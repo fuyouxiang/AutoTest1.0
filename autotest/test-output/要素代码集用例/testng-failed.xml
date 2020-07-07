@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [要素代码集用例]">
+  <parameter name="username" value="999999999"/>
+  <parameter name="password" value="1"/>
+  <test name="要素代码集新增用例(failed)">
+    <classes>
+      <class name="zichan.basedata.po.test.SysElementRemarkPageTest">
+        <parameter name="codeRule" value="codeRule111"/>
+        <parameter name="scope" value="scope111"/>
+        <parameter name="eleStandard" value="eleStandard111"/>
+        <parameter name="remark" value="remark111"/>
+        <parameter name="eleCode" value="931"/>
+        <parameter name="eleName" value="931Name"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.basedata.po.test.SysElementRemarkPageTest -->
+      <class name="zichan.common.po.test.IndexPageTest">
+        <parameter name="codeRule" value="codeRule111"/>
+        <parameter name="scope" value="scope111"/>
+        <parameter name="eleStandard" value="eleStandard111"/>
+        <parameter name="remark" value="remark111"/>
+        <parameter name="eleCode" value="931"/>
+        <parameter name="eleName" value="931Name"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.IndexPageTest -->
+      <class name="zichan.basedata.po.test.SysElementSourcePageTest">
+        <parameter name="codeRule" value="codeRule111"/>
+        <parameter name="scope" value="scope111"/>
+        <parameter name="eleStandard" value="eleStandard111"/>
+        <parameter name="remark" value="remark111"/>
+        <parameter name="eleCode" value="931"/>
+        <parameter name="eleName" value="931Name"/>
+        <methods>
+          <include name="testSave"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.basedata.po.test.SysElementSourcePageTest -->
+      <class name="zichan.basedata.po.test.SysElementStandardPageTest">
+        <parameter name="codeRule" value="codeRule111"/>
+        <parameter name="scope" value="scope111"/>
+        <parameter name="eleStandard" value="eleStandard111"/>
+        <parameter name="remark" value="remark111"/>
+        <parameter name="eleCode" value="931"/>
+        <parameter name="eleName" value="931Name"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.basedata.po.test.SysElementStandardPageTest -->
+      <class name="zichan.common.po.test.LoginPageTest">
+        <parameter name="codeRule" value="codeRule111"/>
+        <parameter name="scope" value="scope111"/>
+        <parameter name="eleStandard" value="eleStandard111"/>
+        <parameter name="remark" value="remark111"/>
+        <parameter name="eleCode" value="931"/>
+        <parameter name="eleName" value="931Name"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.common.po.test.LoginPageTest -->
+      <class name="zichan.basedata.po.test.SysElementBasePageTest">
+        <parameter name="codeRule" value="codeRule111"/>
+        <parameter name="scope" value="scope111"/>
+        <parameter name="eleStandard" value="eleStandard111"/>
+        <parameter name="remark" value="remark111"/>
+        <parameter name="eleCode" value="931"/>
+        <parameter name="eleName" value="931Name"/>
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- zichan.basedata.po.test.SysElementBasePageTest -->
+    </classes>
+  </test> <!-- 要素代码集新增用例(failed) -->
+</suite> <!-- Failed suite [要素代码集用例] -->

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="业务模块管理测试用例" preserve-order="true" >
+	  
+	<listeners>
+		<listener class-name="main.util.RetryListener"></listener>
+		<listener class-name="main.util.TestNGListener"></listener>
+	</listeners>
+		
+	<test name="登录系统">
+		<parameter name="username" value="productadmin"></parameter>
+		<parameter name="password" value="cz_"></parameter>
+		<classes>
+			<!--  
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickLogoutBtn"></include>
+				</methods>
+			</class> 
+			-->
+			<class name="fcfa.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class> 
+		</classes>	
+	</test>
+	
+		
+	<test name="新增业务模块" preserve-order="true" thread-count="1">	
+		<parameter name="spApp_code" value="8011"></parameter>
+		<parameter name="spApp_version" value="V1.1"></parameter>
+		<parameter name="spApp_name" value="自动化新增业务模块8011"></parameter>
+		<parameter name="spApp_developer" value="开发商名称"></parameter>
+		<parameter name="expectedMsg" value="保存成功"></parameter>
+		<classes>	
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickSpApp"></include>
+					<include name="testClickAddBtn"></include>
+				</methods>
+			</class> 	
+			<class name="fcfa.sysmanage.po.test.SpAppEditPageTest"></class> 	
+			<class name="fcfa.common.po.test.ConfirmNewPageTest"></class> 	
+		</classes>
+	</test> 
+	
+	
+	<test name="修改业务模块" preserve-order="true" thread-count="1">	
+		<parameter name="spApp_code" value="8022"></parameter>
+		<parameter name="spApp_version" value="V1.2"></parameter>
+		<parameter name="spApp_name" value="自动化修改业务模块8022"></parameter>
+		<parameter name="spApp_developer" value="开发商新名称"></parameter>
+		<parameter name="expectedMsg" value="保存成功！"></parameter>
+		
+		<classes>	
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickModifyBtn"></include>
+				</methods>
+			</class> 	
+			<class name="fcfa.sysmanage.po.test.SpAppEditPageTest"></class> 	
+			<class name="fcfa.common.po.test.ConfirmPageTest"></class> 	
+		</classes>
+	</test> 
+	
+	 
+	<test name="启用业务模块" preserve-order="true" thread-count="1">	
+		<parameter name="expectedMsg" value="启用成功！"></parameter>
+		<classes>	
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickEnableBtn"></include>
+				</methods>
+			</class> 	
+			
+			<class name="fcfa.common.po.test.ConfirmPageTest"></class> 	
+		</classes>
+	</test> 
+	
+	<test name="停用业务模块" preserve-order="true" thread-count="1">	
+		<parameter name="expectedMsg" value="停用成功！"></parameter>
+		<classes>	
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDisableBtn"></include>
+				</methods>
+			</class> 	
+			
+			<class name="fcfa.common.po.test.ConfirmPageTest"></class> 	
+		</classes>
+	</test> 
+	
+	 
+	<test name="删除业务模块" preserve-order="true" thread-count="1">
+		<classes>	
+			<class name="fcfa.common.po.test.IndexPageTest">
+				
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDeleteBtn"></include>
+				</methods>
+			</class> 	
+			
+			<class name="fcfa.common.po.test.DeleteConfirmPageTest">
+				<methods>
+					<include name="testClickdelConfirmBtn"></include>
+				</methods>
+			</class> 	
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<parameter name="expectedMsg" value="删除成功！"></parameter>
+				<methods>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class> 
+			
+		</classes>
+	</test> 
+	 
+</suite>
+ 
+  
+  

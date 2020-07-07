@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [登录系统测试用例]">
+  <parameter name="username" value="161001052"/>
+  <parameter name="ZhaiYao" value="付有翔自动化测试摘要"/>
+  <parameter name="payAccountBank" value="中国农业银行济南市和平支行泺源分理处"/>
+  <parameter name="PayNumber" value="10000"/>
+  <parameter name="payAccountName" value="自动化测试账户"/>
+  <parameter name="password" value="1"/>
+  <parameter name="payAccountNo" value="12345678901234"/>
+  <parameter name="paymoney" value="1.11"/>
+  <test name="登录单位经办岗(failed)">
+    <parameter name="username" value="161001052"/>
+    <parameter name="password" value="1"/>
+    <classes>
+      <class name="fasp.PayAccredit.po.test.PuTongZhuanZhangInputTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- fasp.PayAccredit.po.test.PuTongZhuanZhangInputTest -->
+      <class name="fasp.common.po.test.LoginPageTest">
+        <methods>
+          <include name="testLogin" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- fasp.common.po.test.LoginPageTest -->
+    </classes>
+  </test> <!-- 登录单位经办岗(failed) -->
+  <test name="普通录入(failed)">
+    <parameter name="ZhaiYao" value="付有翔自动化测试摘要"/>
+    <parameter name="payAccountBank" value="中国农业银行济南市和平支行泺源分理处"/>
+    <parameter name="PayNumber" value="10000"/>
+    <parameter name="payAccountName" value="自动化测试账户"/>
+    <parameter name="payAccountNo" value="12345678901234"/>
+    <parameter name="paymoney" value="1.11"/>
+    <classes>
+      <class name="fasp.PayAccredit.po.test.PuTongZhuanZhangInputTest">
+        <methods>
+          <include name="setup"/>
+          <include name="inputMessage" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- fasp.PayAccredit.po.test.PuTongZhuanZhangInputTest -->
+      <class name="fasp.common.po.test.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- fasp.common.po.test.LoginPageTest -->
+    </classes>
+  </test> <!-- 普通录入(failed) -->
+</suite> <!-- Failed suite [登录系统测试用例] -->

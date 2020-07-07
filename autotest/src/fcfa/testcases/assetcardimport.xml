@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "HTTP://testng.org/testng-1.0.dtd">
+<suite name="资产导入用例">
+	<test name="登录系统">
+		<classes>
+			<class name="fcfa.common.po.test.LoginPageTest">
+				<parameter name="username" value="115001"></parameter>
+				<parameter name="password" value="1"></parameter>
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="资产导入">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickAssetImport"></include>
+				</methods>
+			</class>
+			<class name="fcfa.assetmanage.po.test.AssetCardImportPageTest">
+				<parameter name="filePath" value="E:\\muban.xls"></parameter>
+			</class>
+		</classes>
+	</test>
+
+
+</suite>

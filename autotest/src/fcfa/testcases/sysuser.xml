@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "HTTP://testng.org/testng-1.0.dtd">
+<suite name="系统管理-用户管理用例" preserve-order="true" thread-count="1">
+
+	<test name="登录系统" preserve-order="true">
+	
+		<classes>
+		 
+			<class name="fcfa.common.po.test.IndexPageTest">
+					<methods>
+						<include name="testClickLogoutBtn"></include>
+					</methods>
+			</class>  
+			<class name="fcfa.common.po.test.LoginPageTest">
+				<parameter name="username" value="B330001"></parameter>
+				<parameter name="password" value="cz_"></parameter>
+				
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="新增用户" preserve-order="true">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickSysUser"></include>
+					<include name="testClickAddBtn"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.sysmanage.po.test.SysUserEditPageTest">
+				<parameter name="usercode" value="autotest111"></parameter>
+				<parameter name="username" value="自动化测试用户111"></parameter>
+				<parameter name="password" value="1"></parameter>
+				<parameter name="confirmPwd" value="1"></parameter>
+				<parameter name="mobile" value="13500000000"></parameter>
+				<parameter name="remark" value="自动化测试备注111"></parameter>
+				<methods>
+					<include name="testSave"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="保存成功！"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="修改用户" preserve-order="true">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow">
+
+					</include>
+					<include name="testClickModifyBtn"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.sysmanage.po.test.SysUserEditPageTest">
+				<parameter name="usercode" value="autotest222"></parameter>
+				<parameter name="username" value="自动化测试修改用户222"></parameter>
+				<parameter name="password" value="1"></parameter>
+				<parameter name="confirmPwd" value="1"></parameter>
+				<parameter name="mobile" value="13500000022"></parameter>
+				<parameter name="remark" value="自动化测试修改备注222"></parameter>
+				<methods>
+					<include name="testSave"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="保存成功！"></parameter>
+					</include>	
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	  
+	<test name="启用用户">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickEnableBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="启用成功！"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	<test name="停用用户">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDisableBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="停用成功！"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="注销用户">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickLogoutUserBtn"></include>
+				</methods>
+			</class>
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="注销成功！"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	  
+	<test name="删除用户" preserve-order="true">
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDeleteBtn"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.common.po.test.DeleteConfirmPageTest">
+				<methods>
+					<include name="testClickdelConfirmBtn"></include>
+				</methods>
+			</class>
+			
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testAssertEquals">
+						<parameter name="expectedMsg" value="删除成功!"></parameter>
+					</include>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class>
+			  
+		</classes>
+	</test>
+  
+</suite>

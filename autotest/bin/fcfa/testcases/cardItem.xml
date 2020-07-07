@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="信息项管理测试用例" preserve-order="true" >
+	
+	<test name="登录系统">
+		<parameter name="username" value="B330001"></parameter>
+		<parameter name="password" value="cz_"></parameter>
+		<classes>
+			<!--  
+				<class name="fcfa.common.po.test.IndexPageTest">
+					<methods>
+						<include name="testClickLogoutBtn"></include>
+					</methods>
+				</class> 
+			-->
+			<class name="fcfa.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class> 
+		</classes>	
+	</test>
+	
+	
+	<test name="新增信息项" preserve-order="true" thread-count="1">
+		<parameter name="code" value="9011"></parameter>
+		<parameter name="name" value="自动化新增信息项9011"></parameter>
+		<parameter name="maxlen" value="11"></parameter>
+		<parameter name="expectedMsg" value="保存成功！"></parameter>
+		<classes>
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testClickCardItem"></include>
+					<include name="testClickAddBtn"></include>
+					<exclude name="testClickLogoutBtn"></exclude>
+				</methods>
+			</class> 	
+			<class name="fcfa.assetmanage.po.test.CardItemEditPageTest"></class> 	
+			<class name="fcfa.common.po.test.ConfirmPageTest"></class> 
+			
+		</classes>
+	</test> 
+	
+		 
+	<test name="修改信息项" preserve-order="true" thread-count="1">
+		<parameter name="code" value="9022"></parameter>
+		<parameter name="name" value="自动化修改信息项9022"></parameter>
+		<parameter name="maxlen" value="10"></parameter>
+		<parameter name="expectedMsg" value="保存成功！"></parameter>	
+		<classes>	
+			<class name="fcfa.common.po.test.IndexPageTest">
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickModifyBtn"></include>
+				</methods>
+			</class> 	
+			<class name="fcfa.assetmanage.po.test.CardItemEditPageTest"></class> 	
+			<class name="fcfa.common.po.test.ConfirmPageTest"></class> 	
+		</classes>
+	</test> 
+	
+	
+	<test name="删除信息项" preserve-order="true" thread-count="1">
+		<classes>	
+			<class name="fcfa.common.po.test.IndexPageTest">
+				
+				<methods>
+					<include name="testSelectRow"></include>
+					<include name="testClickDeleteBtn"></include>
+				</methods>
+			</class> 	
+			
+			<class name="fcfa.common.po.test.DeleteConfirmPageTest">
+				<methods>
+					<include name="testClickdelConfirmBtn"></include>
+				</methods>
+			</class> 	
+			<class name="fcfa.common.po.test.ConfirmPageTest">
+				<methods>
+					<include name="testclickConfirmBtn"></include>
+				</methods>
+			</class> 
+			
+		</classes>
+	</test> 
+	
+	 
+  
+</suite>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="登录系统测试用例" preserve-order="true">
+
+	<test name="正常登录">
+		<parameter name="username" value="1214"></parameter><!-- 用户名 -->
+		<parameter name="password" value="1"></parameter><!-- 密码 -->
+		<classes>
+			<class name="fasp.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	 
+	<test name="指标新增并送审">
+		<parameter name="ModuleName" value="付有翔年初控制数指标模板"></parameter><!-- 新增模板的模板名称 -->
+		<parameter name="ModuleMoney" value="123.45"></parameter><!-- 新增模板的金额 -->
+		<classes>
+			<class name="fasp.budget.po.test.ControlBudgetInputTest">
+				<methods>
+					<include name="sidebarButton"></include><!-- 拉开 -->
+					<include name="GuanLiButton"></include><!-- 指标管理 -->
+					<include name="ControlBudget"></include><!-- 年初控制数录入 -->
+					<include name="menuFrame"></include><!-- 定位到iframe -->
+					<include name="Waittime2"></include><!-- 年初控制数录入强制等待3s -->
+					<include name="ControlBudgetInputButton"></include><!-- 年初控制数录入 -->
+					<include name="Waittime2"></include><!-- 年初控制数录入强制等待2s -->
+					<include name="newmodule"></include><!-- 新增模板 -->
+					<include name="NewModuleData"></include><!-- 填写模板数据 -->
+					<include name="ChooseModule"></include><!-- 选择模板 -->
+					<include name="ChooseModule_Data"></include><!-- 选择模板后补充 -->		
+					<include name="AddControlBudgetData"></include><!-- 加号-->
+					<include name="ControlBudgetDataSave"></include><!-- 保存数据-->
+					<include name="ZhiBiaoSongShen_1"></include><!-- 指标送审	-->	
+					<!--<include name="AllZhiBiao"></include>	
+					<include name="MoreZhiBiaoSongShen"></include>	-->				
+				</methods>			
+			</class>
+		</classes>
+	</test>
+		
+	
+	
+</suite>

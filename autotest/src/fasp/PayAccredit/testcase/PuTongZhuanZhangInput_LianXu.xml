@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="登录系统测试用例" preserve-order="true">
+
+	<test name="登录单位经办岗">
+		<parameter name="username" value="161001052"></parameter>
+		<parameter name="password" value="1"></parameter>
+		<classes>
+			<class name="fasp.common.po.test.LoginPageTest">
+				<methods>
+					<include name="testLogin"></include>
+					<include name="Sleep5"></include>
+					<include name="MenHuXuanZe"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+
+	<test name="普通录入">
+	    <parameter name="payAccountName" value="自动化测试账户"></parameter>
+	    <parameter name="payAccountNo" value="12345678901234"></parameter>
+	    <parameter name="payAccountBank" value="中国农业银行济南市和平支行泺源分理处"></parameter>
+	    <parameter name="paymoney" value="1.11"></parameter>
+	    <parameter name="ZhaiYao" value="付有翔自动化测试摘要"></parameter>
+	    <parameter name="PayNumber" value="10000"></parameter>
+	    
+		<classes>
+			<class name="fasp.ShouQuanLiuCheng.po.test.ShouQuanLiuChengTest">
+				<methods>
+				    <include name="Sleep20"></include>
+				    <include name="menuFrameZhuYe"></include>
+				    <include name="TestButton"></include>
+					<include name="IWantPayButton"></include>
+					<include name="XianJinYeWuButton"></include>
+					<include name="JumpmenuFrame"></include>
+					<include name="menuFrameXianJin"></include>
+					<include name="Sleep5"></include>
+					<include name="GaoJiChaXun"></include>
+					<include name="ZhiBiaoChoose"></include>
+					<include name="ZhiBiaoChoose2"></include>
+					<include name="ZhiBiaoChoose3"></include>
+					<include name="inputMessage"></include> 
+	 				<include name="SaveSendButton"></include>
+	 				<include name="Sleep3"></include> 			
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	<!--  
+	<test name="我的单据-经办签章">
+		<classes>
+			<class name="fasp.PayAccredit.po.test.XianJinYeWuInputTest">
+				<methods>
+					<include name="JumpmenuFrame"></include>
+					<include name="MyBill"></include>
+					<include name="menuFrameShouQuan"></include>
+					<include name="Sleep5"></include>
+					<include name="MyBillJBFirst"></include>					
+					<include name="MyBillJBStamp"></include>
+					<include name="Sleep3"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="我的单据-经办签章-退出">
+		<classes>
+			<class name="fasp.PayAccredit.po.test.XianJinYeWuInputTest">
+				<methods>
+					<include name="JumpmenuFrame"></include>					
+					<include name="OutButton"></include>
+					<include name="Sleep3"></include>
+					<include name="OutConfirmButton"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>	
+	 
+	<test name="登录单位审核岗">
+		<parameter name="username" value="16100102"></parameter>
+		<parameter name="password" value="1"></parameter>
+		<classes>
+			<class name="fasp.PayAccredit.po.test.XianJinYeWuInputTest">
+				<methods>
+				    <include name="Sleep5"></include>
+					<include name="testLogin"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="我的单据-审核签章">
+		<classes>
+			<class name="fasp.PayAccredit.po.test.XianJinYeWuInputTest">
+				<methods>
+					<include name="Sleep7"></include>
+					<include name="MyBill"></include>
+					<include name="menuFrameShouQuan"></include>
+					<include name="Sleep5"></include>
+					<include name="MyBillJBFirst"></include>					
+					<include name="MyBillJBStamp"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	
+	
+		<test name="我的单据-审核签公章">
+		<classes>
+			<class name="fasp.PayAccredit.po.test.XianJinYeWuInputTest">
+				<methods>
+					<include name="Sleep7"></include>
+					<include name="MyBill"></include>
+					<include name="menuFrameShouQuan"></include>
+					<include name="Sleep5"></include>
+					<include name="MyBillJBFirst"></include>					
+					<include name="MyBillJBStamp"></include>
+				</methods>			
+			</class>
+		</classes>
+	</test>
+	-->
+</suite>
